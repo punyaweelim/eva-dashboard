@@ -85,8 +85,8 @@ export function LMSDashboard() {
                 <YAxis yAxisId="left" />
                 <YAxis yAxisId="right" orientation="right" />
                 <Tooltip />
-                <Line yAxisId="left" type="monotone" dataKey="vehicles" stroke="#ff6b35" strokeWidth={2} name="Vehicles (thousands)" />
-                <Line yAxisId="right" type="monotone" dataKey="avgSpeed" stroke="#ff8c5a" strokeWidth={2} name="Avg Speed (km/h)" />
+                <Line yAxisId="left" type="monotone" dataKey="vehicles" stroke="#80ed99" strokeWidth={2} name="Vehicles (thousands)" />
+                <Line yAxisId="right" type="monotone" dataKey="avgSpeed" stroke="#57cc99" strokeWidth={2} name="Avg Speed (km/h)" />
               </LineChart>
             </ResponsiveContainer>
           </CardContent>

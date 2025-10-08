@@ -126,7 +126,7 @@ export function VMSDashboard() {
                 <XAxis dataKey="time" />
                 <YAxis />
                 <Tooltip />
-                <Bar dataKey="alerts" fill="#ff6b35" />
+                <Bar dataKey="alerts" fill="#38a3a5" />
               </BarChart>
             </ResponsiveContainer>
           </CardContent>

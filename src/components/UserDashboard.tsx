@@ -11,10 +11,10 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 
 const userRoleData = [
-  { name: "Admin", value: 8, color: "#ff6b35" },
-  { name: "Operator", value: 24, color: "#ff8c5a" },
-  { name: "Viewer", value: 45, color: "#ffad7f" },
-  { name: "Guest", value: 12, color: "#ffcfa5" },
+  { name: "Admin", value: 8, color: "#38a3a5" },
+  { name: "Operator", value: 24, color: "#57cc99" },
+  { name: "Viewer", value: 45, color: "#80ed99" },
+  { name: "Guest", value: 12, color: "#2b9744ff" },
 ];
 
 const userActivityData = [
@@ -172,8 +172,8 @@ export function UserDashboard() {
                 <XAxis dataKey="day" />
                 <YAxis />
                 <Tooltip />
-                <Bar dataKey="active" fill="#ff6b35" name="Active Users" />
-                <Bar dataKey="new" fill="#ff8c5a" name="New Users" />
+                <Bar dataKey="active" fill="#38a3a5" name="Active Users" />
+                <Bar dataKey="new" fill="#57CC99" name="New Users" />
               </BarChart>
             </ResponsiveContainer>
           </CardContent>

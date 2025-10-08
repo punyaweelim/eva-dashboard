@@ -89,7 +89,7 @@ export function Sidebar({
   return (
     <aside className={sidebarClasses}>
       {/* Header with collapse toggle */}
-      <div className={cn("flex items-center justify-between border-b border-sidebar-border", 
+      {/* <div className={cn("flex items-center justify-between border-b border-sidebar-border", 
         collapsed && !isMobile ? "p-2" : "p-4")}>
         {(!collapsed || isMobile) && (
           <div className="flex items-center space-x-2">
@@ -109,7 +109,7 @@ export function Sidebar({
             {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
           </Button>
         )}
-      </div>
+      </div> */}
 
       {/* Navigation */}
       <div className={cn("flex-1 overflow-y-auto", collapsed && !isMobile ? "p-2" : "p-4")}>

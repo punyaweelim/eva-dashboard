@@ -13,9 +13,9 @@ const lineData = [
 ];
 
 const pieData = [
-  { name: "VMS Active", value: 85, color: "#ff6b35" },
-  { name: "LMS Active", value: 92, color: "#ff8c5a" },
-  { name: "IoT Active", value: 78, color: "#ffad7f" },
+  { name: "VMS Active", value: 85, color: "#80ed99" },
+  { name: "LMS Active", value: 92, color: "#57cc99" },
+  { name: "IoT Active", value: 78, color: "#38A3A5" },
 ];
 
 export function OverviewDashboard() {
@@ -71,9 +71,9 @@ export function OverviewDashboard() {
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
-                <Line type="monotone" dataKey="vms" stroke="#ff6b35" strokeWidth={2} />
-                <Line type="monotone" dataKey="lms" stroke="#ff8c5a" strokeWidth={2} />
-                <Line type="monotone" dataKey="iot" stroke="#ffad7f" strokeWidth={2} />
+                <Line type="monotone" dataKey="vms" stroke="#80ed99" strokeWidth={2} />
+                <Line type="monotone" dataKey="lms" stroke="#57cc99" strokeWidth={2} />
+                <Line type="monotone" dataKey="iot" stroke="#38A3A5" strokeWidth={2} />
               </LineChart>
             </ResponsiveContainer>
           </CardContent>

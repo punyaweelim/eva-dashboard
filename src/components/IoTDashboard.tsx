@@ -86,8 +86,8 @@ export function IoTDashboard() {
                 <XAxis dataKey="time" />
                 <YAxis />
                 <Tooltip />
-                <Line type="monotone" dataKey="temperature" stroke="#ff6b35" strokeWidth={2} name="Temperature (°C)" />
-                <Line type="monotone" dataKey="humidity" stroke="#ff8c5a" strokeWidth={2} name="Humidity (%)" />
+                <Line type="monotone" dataKey="temperature" stroke="#38a3a5" strokeWidth={2} name="Temperature (°C)" />
+                <Line type="monotone" dataKey="humidity" stroke="#57cc99" strokeWidth={2} name="Humidity (%)" />
               </LineChart>
             </ResponsiveContainer>
           </CardContent>
@@ -104,7 +104,7 @@ export function IoTDashboard() {
                 <XAxis dataKey="time" />
                 <YAxis />
                 <Tooltip />
-                <Area type="monotone" dataKey="violations" stroke="#ff6b35" fill="#ff6b35" fillOpacity={0.3} />
+                <Area type="monotone" dataKey="violations" stroke="#38a3a5" fill="#38a3a5" fillOpacity={0.3} />
               </AreaChart>
             </ResponsiveContainer>
           </CardContent>
