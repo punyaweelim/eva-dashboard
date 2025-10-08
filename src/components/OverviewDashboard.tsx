@@ -1,4 +1,4 @@
-import { Video, Navigation, Gauge, TrendingUp, AlertTriangle, CheckCircle } from "lucide-react";
+import { Monitor, Navigation, Gauge, TrendingUp, AlertTriangle, CheckCircle } from "lucide-react";
 import { StatCard } from "./StatCard";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell } from "recharts";
@@ -13,9 +13,9 @@ const lineData = [
 ];
 
 const pieData = [
-  { name: "VMS Active", value: 85, color: "#80ed99" },
+  { name: "VMS Active", value: 92, color: "#38A3A5" },
   { name: "LMS Active", value: 92, color: "#57cc99" },
-  { name: "IoT Active", value: 78, color: "#38A3A5" },
+  { name: "IoT Active", value: 78, color: "#80ed99" },
 ];
 
 export function OverviewDashboard() {
@@ -29,11 +29,11 @@ export function OverviewDashboard() {
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatCard
-          title="Total Cameras"
-          value="248"
-          change="+12% from last month"
+          title="Digital Signs"
+          value="84"
+          change="+6 new signs"
           changeType="positive"
-          icon={Video}
+          icon={Monitor}
         />
         <StatCard
           title="Active Lanes"
@@ -71,9 +71,9 @@ export function OverviewDashboard() {
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
-                <Line type="monotone" dataKey="vms" stroke="#80ed99" strokeWidth={2} />
-                <Line type="monotone" dataKey="lms" stroke="#57cc99" strokeWidth={2} />
-                <Line type="monotone" dataKey="iot" stroke="#38A3A5" strokeWidth={2} />
+                 <Line type="monotone" dataKey="vms" stroke="#80ed99" strokeWidth={2} />
+                 <Line type="monotone" dataKey="lms" stroke="#57cc99" strokeWidth={2} />
+                 <Line type="monotone" dataKey="iot" stroke="#38A3A5" strokeWidth={2} />
               </LineChart>
             </ResponsiveContainer>
           </CardContent>
@@ -116,24 +116,24 @@ export function OverviewDashboard() {
             <div className="flex items-center space-x-3 p-3 rounded-lg bg-red-50 border border-red-200">
               <AlertTriangle className="h-5 w-5 text-red-600" />
               <div className="flex-1">
-                <p className="font-medium text-red-900">Camera Offline</p>
-                <p className="text-sm text-red-700">Camera #45 in Zone B is not responding</p>
+                <p className="font-medium text-red-900">VMS Sign Offline</p>
+                <p className="text-sm text-red-700">Highway A1 South digital sign not responding</p>
               </div>
               <span className="text-xs text-red-600">2 min ago</span>
             </div>
             <div className="flex items-center space-x-3 p-3 rounded-lg bg-orange-50 border border-orange-200">
               <AlertTriangle className="h-5 w-5 text-orange-600" />
               <div className="flex-1">
-                <p className="font-medium text-orange-900">High Traffic Volume</p>
-                <p className="text-sm text-orange-700">Lane Controller processing above 85% capacity</p>
+                <p className="font-medium text-orange-900">Message Update Required</p>
+                <p className="text-sm text-orange-700">City Center VMS needs traffic diversion update</p>
               </div>
               <span className="text-xs text-orange-600">15 min ago</span>
             </div>
             <div className="flex items-center space-x-3 p-3 rounded-lg bg-green-50 border border-green-200">
               <CheckCircle className="h-5 w-5 text-green-600" />
               <div className="flex-1">
-                <p className="font-medium text-green-900">System Update Complete</p>
-                <p className="text-sm text-green-700">IoT gateway firmware updated successfully</p>
+                <p className="font-medium text-green-900">VMS Message Updated</p>
+                <p className="text-sm text-green-700">Highway signs updated with new traffic information</p>
               </div>
               <span className="text-xs text-green-600">1 hour ago</span>
             </div>
