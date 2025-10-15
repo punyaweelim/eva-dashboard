@@ -1777,7 +1777,7 @@
 
   @media (hover: hover) {
     .hover\:bg-accent:hover {
-      background-color: var(--accent);
+      background-color: #048018;
     }
   }
 
@@ -1861,7 +1861,7 @@
 
   @media (hover: hover) {
     .hover\:text-accent-foreground:hover {
-      color: var(--accent-foreground);
+      color: #fff;
     }
   }
 
@@ -1885,11 +1885,11 @@
   }
 
   .focus\:bg-accent:focus {
-    background-color: var(--accent);
+    background-color: #048018;
   }
 
   .focus\:text-accent-foreground:focus {
-    color: var(--accent-foreground);
+    color: #fff;
   }
 
   .focus-visible\:border-ring:focus-visible {
@@ -2327,7 +2327,7 @@
 
   @media (hover: hover) {
     .dark\:hover\:bg-accent\/50:is(.dark *):hover {
-      background-color: var(--accent);
+      background-color: #048018;
     }
 
     @supports (color: color-mix(in lab, red, red)) {
