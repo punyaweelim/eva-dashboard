@@ -4,6 +4,7 @@ import { Sidebar } from "./components/Sidebar";
 import { OverviewDashboard } from "./components/OverviewDashboard";
 import { VMSDashboard } from "./components/VMSDashboard";
 import { LMSDashboard } from "./components/LMSDashboard";
+import { WIMDashboard } from "./components/WIMDashboard";
 import { IoTDashboard } from "./components/IoTDashboard";
 import { SecurityDashboard } from "./components/SecurityDashboard";
 import { SettingsDashboard } from "./components/SettingsDashboard";
@@ -41,6 +42,8 @@ export default function App() {
         return <VMSDashboard />;
       case "lms":
         return <LMSDashboard />;
+      case "wim":
+        return <WIMDashboard />;
       case "iot":
         return <IoTDashboard />;
       case "security":

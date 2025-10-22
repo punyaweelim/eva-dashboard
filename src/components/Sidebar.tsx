@@ -1,4 +1,4 @@
-import { Video, Navigation, Gauge, BarChart3, Settings, Shield, Cloud, Radar, Users, FolderOpen, ChevronLeft, ChevronRight } from "lucide-react";
+import { Monitor, Navigation, Gauge, BarChart3, Settings, Shield, Cloud, Radar, Users, FolderOpen, ChevronLeft, ChevronRight, Scale } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "./ui/utils";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
@@ -24,8 +24,9 @@ export function Sidebar({
 }: SidebarProps) {
   const menuItems = [
     { id: "overview", label: "Overview", icon: BarChart3 },
-    { id: "vms", label: "VMS", icon: Video },
+    { id: "vms", label: "VMS", icon: Monitor },
     { id: "lms", label: "LMS", icon: Navigation },
+    { id: "wim", label: "WIM", icon: Scale },
     { id: "iot", label: "IoT Tools", icon: Gauge },
     // { id: "weather", label: "Weather Sensor", icon: Cloud },
     // { id: "radar", label: "Radar", icon: Radar },
@@ -89,7 +90,7 @@ export function Sidebar({
   return (
     <aside className={sidebarClasses}>
       {/* Header with collapse toggle */}
-      {/* <div className={cn("flex items-center justify-between border-b border-sidebar-border", 
+      <div className={cn("flex items-center justify-between border-b border-sidebar-border", 
         collapsed && !isMobile ? "p-2" : "p-4")}>
         {(!collapsed || isMobile) && (
           <div className="flex items-center space-x-2">
@@ -109,7 +110,7 @@ export function Sidebar({
             {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
           </Button>
         )}
-      </div> */}
+      </div>
 
       {/* Navigation */}
       <div className={cn("flex-1 overflow-y-auto", collapsed && !isMobile ? "p-2" : "p-4")}>

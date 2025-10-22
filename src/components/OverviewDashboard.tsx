@@ -1,21 +1,22 @@
-import { Monitor, Navigation, Gauge, TrendingUp, AlertTriangle, CheckCircle } from "lucide-react";
+import { Monitor, Navigation, Gauge, TrendingUp, AlertTriangle, CheckCircle, Scale } from "lucide-react";
 import { StatCard } from "./StatCard";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell } from "recharts";
 
 const lineData = [
-  { name: "Jan", vms: 400, lms: 240, iot: 140 },
-  { name: "Feb", vms: 300, lms: 139, iot: 221 },
-  { name: "Mar", vms: 200, lms: 980, iot: 229 },
-  { name: "Apr", vms: 278, lms: 390, iot: 200 },
-  { name: "May", vms: 189, lms: 480, iot: 218 },
-  { name: "Jun", vms: 239, lms: 380, iot: 250 },
+  { name: "Jan", vms: 400, lms: 240, wim: 320, iot: 140 },
+  { name: "Feb", vms: 300, lms: 139, wim: 285, iot: 221 },
+  { name: "Mar", vms: 200, lms: 980, wim: 395, iot: 229 },
+  { name: "Apr", vms: 278, lms: 390, wim: 412, iot: 200 },
+  { name: "May", vms: 189, lms: 480, wim: 438, iot: 218 },
+  { name: "Jun", vms: 239, lms: 380, wim: 456, iot: 250 },
 ];
 
 const pieData = [
-  { name: "VMS Active", value: 92, color: "#38A3A5" },
-  { name: "LMS Active", value: 92, color: "#57cc99" },
-  { name: "IoT Active", value: 78, color: "#80ed99" },
+  { name: "VMS Active", value: 92, color: "#ff6b35" },
+  { name: "LMS Active", value: 92, color: "#ff8c5a" },
+  { name: "WIM Active", value: 83, color: "#ffad7f" },
+  { name: "IoT Active", value: 78, color: "#ffcfa5" },
 ];
 
 export function OverviewDashboard() {
@@ -27,7 +28,7 @@ export function OverviewDashboard() {
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
         <StatCard
           title="Digital Signs"
           value="84"
@@ -43,19 +44,26 @@ export function OverviewDashboard() {
           icon={Navigation}
         />
         <StatCard
+          title="WIM Stations"
+          value="18"
+          change="15 online"
+          changeType="positive"
+          icon={Scale}
+        />
+        <StatCard
           title="IoT Devices"
           value="156"
           change="-2% from last month"
           changeType="negative"
           icon={Gauge}
         />
-        <StatCard
+        {/* <StatCard
           title="System Health"
           value="98.5%"
           change="+0.5% from last month"
           changeType="positive"
           icon={TrendingUp}
-        />
+        /> */}
       </div>
 
       {/* Charts Row */}
@@ -71,9 +79,10 @@ export function OverviewDashboard() {
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
-                 <Line type="monotone" dataKey="vms" stroke="#80ed99" strokeWidth={2} />
-                 <Line type="monotone" dataKey="lms" stroke="#57cc99" strokeWidth={2} />
-                 <Line type="monotone" dataKey="iot" stroke="#38A3A5" strokeWidth={2} />
+                <Line type="monotone" dataKey="vms" stroke="#ff6b35" strokeWidth={2} name="VMS" />
+                <Line type="monotone" dataKey="lms" stroke="#ff8c5a" strokeWidth={2} name="LMS" />
+                <Line type="monotone" dataKey="wim" stroke="#ffad7f" strokeWidth={2} name="WIM" />
+                <Line type="monotone" dataKey="iot" stroke="#ffcfa5" strokeWidth={2} name="IoT" />
               </LineChart>
             </ResponsiveContainer>
           </CardContent>

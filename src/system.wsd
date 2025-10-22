@@ -1,0 +1,19 @@
+@startuml WeightInMotionSystem
+
+!define RECTANGLE class
+
+RECTANGLE Vehicle
+RECTANGLE Sensor
+RECTANGLE Controller
+RECTANGLE Database
+RECTANGLE UserInterface
+RECTANGLE ReportingService
+
+Vehicle -down-> Sensor : passes over
+Sensor -down-> Controller : sends weight data
+Controller -down-> Database : stores processed data
+Controller -right-> UserInterface : displays real-time info
+Database -right-> ReportingService : provides data for reports
+ReportingService -up-> UserInterface : shows reports
+
+@enduml
